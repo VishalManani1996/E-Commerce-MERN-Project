@@ -127,7 +127,7 @@ const ProductList = () => {
   }, []);
 
   const getProducts = async () => {
-    let result = await fetch("http://localhost:5001/products", {
+    let result = await fetch("e-commerce-mern-project-backend.vercel.app/products", {
       headers: {
         authorization: `bearer ${JSON.parse(localStorage.getItem("token"))}`,
       },
