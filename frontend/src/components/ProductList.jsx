@@ -137,7 +137,7 @@ const ProductList = () => {
   };
 
   const deleteProduct = async (id) => {
-    let result = await fetch(`http://localhost:5001/product/${id}`, {
+    let result = await fetch(`e-commerce-mern-project-backend.vercel.app/product/${id}`, {
       method: "Delete",
       headers: {
         authorization: `bearer ${JSON.parse(localStorage.getItem("token"))}`,
@@ -152,7 +152,7 @@ const ProductList = () => {
   const handleSearchProduct = async (event) => {
     let key = event.target.value;
     if (key) {
-      let result = await fetch(`http://localhost:5001/search/${key}`, {
+      let result = await fetch(`e-commerce-mern-project-backend.vercel.app/search/${key}`, {
         headers: {
           authorization: `bearer ${JSON.parse(localStorage.getItem("token"))}`,
         },

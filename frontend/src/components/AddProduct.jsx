@@ -15,7 +15,7 @@ const AddProduct = () => {
     console.log(name, price, category, company);
     const userId = JSON.parse(localStorage.getItem("user"))._id;
     console.log(userId);
-    let result = await fetch("http://localhost:5001/add-product", {
+    let result = await fetch("e-commerce-mern-project-backend.vercel.app/add-product", {
       method: "post",
       body: JSON.stringify({ name, price, category, company, userId }),
       headers: {

@@ -15,7 +15,7 @@ const UpdateProduct = () => {
 
   const getProductDetails = async () => {
     console.log(params);
-    let result = await fetch(`http://localhost:5001/product/${params.id}`, {
+    let result = await fetch(`e-commerce-mern-project-backend.vercel.app/product/${params.id}`, {
       headers: {
         authorization: `bearer ${JSON.parse(localStorage.getItem("token"))}`,
       },
@@ -29,7 +29,7 @@ const UpdateProduct = () => {
 
   const handleUpdateProduct = async () => {
     console.log(name, price, category, company);
-    let result = await fetch(`http://localhost:5001/product/${params.id}`, {
+    let result = await fetch(`e-commerce-mern-project-backend.vercel.app/product/${params.id}`, {
       method: "PUT",
       body: JSON.stringify({ name, price, category, company }),
       headers: {

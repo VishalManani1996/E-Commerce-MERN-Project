@@ -16,7 +16,7 @@ const SignUp = () => {
 
   const collectData = async () => {
     console.warn(name, email, password);
-    let result = await fetch("http://localhost:5001/signup", {
+    let result = await fetch("e-commerce-mern-project-backend.vercel.app/signup", {
       method: "post",
       body: JSON.stringify({ name, email, password }),
       headers: {
