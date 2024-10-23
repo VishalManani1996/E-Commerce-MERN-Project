@@ -128,4 +128,6 @@ function verifyToken(req, resp, next) {
   }
 }
 
-app.listen('e-commerce-mern-project-backend.vercel.app');
+const port = process.env.PORT || 3000;
+app.listen(port, () => console.log(`Server running on port ${port}`));
+
