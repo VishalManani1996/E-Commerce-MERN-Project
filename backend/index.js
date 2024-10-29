@@ -1,11 +1,14 @@
 const express = require("express");
 const cors = require("cors");
+require("dotenv").config();
+
 require("./db/config");
 const User = require("./db/User");
 const Product = require("./db/Product");
+const PORT = process.env.PORT || 5001
 
 const Jwt = require("jsonwebtoken");
-const jwtKey = "e-comm";
+const jwtKey = process.env.JWT_KEY;
 
 const app = express();
 app.use(express.json());
@@ -128,5 +131,6 @@ function verifyToken(req, resp, next) {
   }
 }
 
-app.listen(5001);
-
+app.listen(PORT, () =>{
+  console.log(`Server started at port no. ${PORT}`)
+});
