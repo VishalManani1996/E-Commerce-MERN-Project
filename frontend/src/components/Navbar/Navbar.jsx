@@ -35,13 +35,13 @@ const Navbar = () => {
               <li>
                 <Link to="/add">Add Products</Link>
               </li>
-              <li>
+              {/* <li>
                 <Link to="/update">Update Products</Link>
-              </li>
+              </li> */}
 
-              <li>
+              {/* <li>
                 <Link to="/profile">Profile</Link>
-              </li>
+              </li> */}
               <li>
                 <Link onClick={logout} to="/signup">
                   Logout | {JSON.parse(auth).name}
